@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+}
+ul li,
+ol li {
+    list-style: none;
+}
+
+.footer-area{
+    background-color: #232323;
+    padding: 40px 10px;
+}
+
+.footer-area .widget-title {
+    margin-bottom: 25px;
+}
+.footer-area .widget-title h6 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: white;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+.footer-area .footer-social-info a {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.useful-links li {
+    list-style: none;
+}
