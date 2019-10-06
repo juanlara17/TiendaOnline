@@ -17,7 +17,7 @@
                 <p>Precio: ${{ product.price|number_format(2) }}</p>
                 <p>
                     <a href="#">La quiero</a>
-                    <a href="#">La quiero</a>
+                    <a href="{{ route('product-detail', product.slug) }}">Leer mas</a>
                 </p>
             </div>
         {% endfor %}
