@@ -1,0 +1,25 @@
+{% extends 'layout.twig' %}
+
+{% block title %}
+    Catalogo y Detalles
+{% endblock %}
+
+{% block content %}
+    <h1>Listado de Productos</h1>
+    <div class="products">
+        {% for product in products %}
+            <div class="product">
+                <h4>{{ product.name }}</h4>
+                <img src="{{ product.image }}" alt="" width="250">
+            </div>
+            <div class="product-info">
+                <p>{{ product.extract }}</p>
+                <p>Precio: ${{ product.price|number_format(2) }}</p>
+                <p>
+                    <a href="#">La quiero</a>
+                    <a href="#">La quiero</a>
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
