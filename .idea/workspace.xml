@@ -2,33 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddf114e8-3ff4-4db9-a96b-7781b0e38f2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/AnimOnScroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/classie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/imagesloaded.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/masonry.pkgd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/modernizr.custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/store/demo.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StoreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StoreController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ProductTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ProductTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/store/demo.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/store/demo.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/store/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/store/index.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -196,7 +173,7 @@
       <workItem from="1570245636022" duration="1871000" />
       <workItem from="1570276609025" duration="6909000" />
       <workItem from="1570318506488" duration="4711000" />
-      <workItem from="1570364508314" duration="18042000" />
+      <workItem from="1570364508314" duration="19069000" />
     </task>
     <servers />
   </component>

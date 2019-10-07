@@ -5,21 +5,23 @@
 {% endblock %}
 
 {% block content %}
-    <div id="grid">
-        <ul class="grid effect-1" id="grid">
+    <div id="products">
+        <ul class="grid effect-4" id="grid">
             {% for product in products %}
-                <div class="product">
-                    <h4>{{ product.name }}</h4>
-                    <img src="{{ product.image }}" alt="" width="250">
-                </div>
-                <div class="product-info">
-                    <p>{{ product.extract }}</p>
-                    <p>Precio: ${{ product.price|number_format(2) }}</p>
-                    <p>
-                        <a class="btn btn-warning" href="#"><i class="fa fa-cart-plus"></i> La quiero</a>
-                        <a class="btn btn-primary" href="{{ route('product-detail', product.slug) }}"><i class="fa fa-chevron-circle-right"></i> Leer mas</a>
-                    </p>
-                </div>
+                <li>
+                    <div class="">
+                        <h4>{{ product.name }}</h4>
+                        <img src="{{ product.image }}" alt="" width="250">
+                    </div>
+                    <div class="product-info">
+                        <p>{{ product.extract }}</p>
+                        <p>Precio: ${{ product.price|number_format(2) }}</p>
+                        <p>
+                            <a class="btn btn-warning" href="#"><i class="fa fa-cart-plus"></i> La quiero</a>
+                            <a class="btn btn-primary" href="{{ route('product-detail', product.slug) }}"><i class="fa fa-chevron-circle-right"></i> Leer mas</a>
+                        </p>
+                    </div>
+                </li>
             {% endfor %}
         </ul>
     </div>
