@@ -17,7 +17,7 @@ class StoreController extends Controller
             $nameProducts = array($product['name']);
         }
 //        dd($nameProducts)
-        return \view('/store.index', compact('products'));
+        return \view('/store.demo', compact('products'));
     }
 
     public function show($slug)
