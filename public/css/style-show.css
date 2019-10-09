@@ -1,0 +1,12 @@
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/******* Detalle del producto ******/
+.product-block {
+    border: 1px solid gray;
+    border-radius: 1em;
+    padding: 1em;
+}

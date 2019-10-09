@@ -1,29 +1,31 @@
 .grid {
-	max-width: 69em;
-	list-style: none;
-	margin: 30px auto;
-	padding: 0;
+    max-width: 69em;
+    list-style: none;
+    margin: 30px auto;
+    padding: 0;
 }
 
 .grid li {
 	display: block;
 	float: left;
-	padding: 7px;
+	margin: 0;
 	width: 33%;
 	opacity: 0;
+    padding: 7px;
 }
 
 .grid li.shown,
 .no-js .grid li,
 .no-cssanimations .grid li {
 	opacity: 1;
+    background: white;
 }
 
 .grid li a,
 .grid li img {
 	outline: none;
 	border: none;
-	display: block;
+	/*display: block;*/
 	max-width: 100%;
 }
 
@@ -83,6 +85,7 @@
 .grid.effect-4 {
 	-webkit-perspective: 1300px;
 	perspective: 1300px;
+
 }
 
 .grid.effect-4 li.animate {
@@ -92,6 +95,9 @@
 	transform: translateZ(400px) translateY(300px) rotateX(-90deg);
 	-webkit-animation: fallPerspective .8s ease-in-out forwards;
 	animation: fallPerspective .8s ease-in-out forwards;
+    border-radius: 1px;
+    background: white;
+    padding: 1em;
 }
 
 @-webkit-keyframes fallPerspective {
