@@ -11,13 +11,19 @@ class StoreController extends Controller
 {
     public function index()
     {
+
+//        dd($nameProducts)
+        return \view('/page.index');
+    }
+
+    public function catalog()
+    {
         $products = Product::all();
 
         foreach ($products as $product) {
             $nameProducts = array($product['name']);
         }
-//        dd($nameProducts)
-        return \view('/store.index', compact('products'));
+        return \view('store.index', compact('products'));
     }
 
     public function show($slug)

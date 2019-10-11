@@ -15,8 +15,14 @@ Route::get('/', [
     'as' => 'home',
     'uses' => 'StoreController@index']);
 
+Route::get('/catalog', [
+    'as' => 'catalog',
+    'uses' => 'StoreController@catalog'
+]);
+
 Route::get('product/{slug}', [
     'as' => 'product-detail',
     'uses' => 'StoreController@show']);
+
 
 
