@@ -1,0 +1,61 @@
+{% extends('layout.twig') %}
+
+{% block title %}
+    Esmeralda y Oro
+{% endblock %}
+
+{% block content %}
+
+<div class="text-center">
+    <div class="page-header">
+        <h1><i class="fa fa-shopping-cart"> Carrito De Compras</i></h1>
+    </div>
+
+    <div class="table-cart">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col"><span>Imagen</span></th>
+                    <th scope="col"><span>Producto</span></th>
+                    <th scope="col"><span>Precio</span></th>
+                    <th scope="col"><span>Cantidad</span></th>
+                    <th scope="col"><span>Subtotal</span></th>
+                    <th scope="col"><span>Eliminar</span></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in cart %}
+                    <tr>
+                        <th scope="row"></th>
+                        <td><img src="{{ item.image }}" alt="image"></td>
+                        <td>{{ item.name }}</td>
+                        <td>${{ item.price|number_format(2) }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>{{ (item.price * item.quantity) | number_format(2) }}</td>
+                        <td>
+                            <a href="#" class="btn btn-danger">
+                                <i class="fa fa-remove"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    var table = document.getElementsByTagName('table')[0],
+        rows = table.getElementsByTagName('tr'),
+        text = 'textContent' in document ? 'textContent' : 'innerText';
+
+    for (var i = 1, len = rows.length; i < len; i++){
+        rows[i].children[0][text] = i + ' ' + rows[i].children[0][text];
+    }
+</script>
+{% endblock %}
+
+

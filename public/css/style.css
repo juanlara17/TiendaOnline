@@ -13,3 +13,16 @@ body {
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Roboto', cursive;
 }
+
+/***** CARRITO DE COMPRAS *****/
+
+.table-cart {
+    background: #ffffff;
+    border-radius: 1em;
+    margin-bottom: 30px;
+    padding: 1em;
+}
+
+.table-cart img {
+    width: 50px;
+}

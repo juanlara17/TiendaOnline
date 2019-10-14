@@ -17,16 +17,21 @@
                     <hr>
                     <div class="product-info">
                         <p>{{ product.description }}</p>
-                        <p><span class="label label-success">Precio: ${{ product.price|number_format(2) }}</span></p>
                         <p>
-                            <a class="btn btn-warning btn-block" href="#"><i class="fa fa-cart-plus"></i>   La quiero</a>
+                            <span class="label label-success">
+                                Precio: ${{ product.price|number_format(2) }}</span>
+                        </p>
+                        <p>
+                            <a class="btn btn-warning btn-block" href="{{ route('cart-add', product.slug) }}">
+                                <i class="fa fa-cart-plus"></i> La quiero</a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
         <hr>
-        <p><a class="btn btn-primary" href="{{ route('home') }}"><i class="fa fa-chevron-circle-left"></i> Regresar</a></p>
+        <p><a class="btn btn-primary" href="{{ route('home') }}"><i class="fa fa-chevron-circle-left"></i> Regresar</a>
+        </p>
     </div>
 {% endblock %}
 
