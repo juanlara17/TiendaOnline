@@ -40,4 +40,9 @@ Route::get('cart/add/{product}', [
     'uses' => 'CartController@add'
 ]);
 
+Route::get('cart/delete/{product}', [
+    'as' => 'cart-delete',
+    'uses' => 'CartController@delete'
+]);
+
 

@@ -34,9 +34,13 @@ class CartController extends Controller
     }
 
     /***** DELETE ITEM *****/
-    public function delete()
+    public function delete(Product $product)
     {
+        $cart = \Session::get('cart');
+        unset($cart[$product->slug]);
+        \Session::put('cart', $cart);
 
+        return redirect()->route('cart-show');
     }
 
     /***** UPDATE ITEM *****/
