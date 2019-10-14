@@ -45,4 +45,9 @@ Route::get('cart/delete/{product}', [
     'uses' => 'CartController@delete'
 ]);
 
+Route::get('cart/trash', [
+    'as' => 'cart-trash',
+    'uses' => 'CartController@trash'
+]);
+
 

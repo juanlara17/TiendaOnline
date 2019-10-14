@@ -13,6 +13,11 @@
 
     <div class="table-cart">
         {% if cart|length %}
+
+            <p>
+                <a href="{{ route('cart-trash') }}" class="btn btn-warning">Vaciar Lista  <i class="fa fa-trash"></i></a>
+            </p>
+
             <div class="table-responsive">
                 <table class="table table-striped table-hover table-bordered">
                     <thead class="thead-dark">
