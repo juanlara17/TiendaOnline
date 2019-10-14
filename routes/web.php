@@ -20,7 +20,7 @@ Route::get('/', [
     'uses' => 'StoreController@index']);
 
 Route::get('/catalog', [
-    'as' => 'catalog',
+    'as' => 'catalogo',
     'uses' => 'StoreController@catalog'
 ]);
 
@@ -50,4 +50,8 @@ Route::get('cart/trash', [
     'uses' => 'CartController@trash'
 ]);
 
+Route::get('cart/update/{product}/{quantity}', [
+    'as' => 'cart-update',
+    'uses' => 'CartController@update'
+]);
 

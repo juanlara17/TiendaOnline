@@ -13,11 +13,9 @@
 
     <div class="table-cart">
         {% if cart|length %}
-
             <p>
                 <a href="{{ route('cart-trash') }}" class="btn btn-warning">Vaciar Lista  <i class="fa fa-trash"></i></a>
             </p>
-
             <div class="table-responsive">
                 <table class="table table-striped table-hover table-bordered">
                     <thead class="thead-dark">
@@ -38,8 +36,25 @@
                             <td><img src="{{ item.image }}" alt="image"></td>
                             <td>{{ item.name }}</td>
                             <td>${{ item.price|number_format(2) }}</td>
-                            <td>{{ item.quantity }}</td>
-                            <td>{{ (item.price * item.quantity) | number_format(2) }}</td>
+                            <td>
+                                <input
+                                    type="number"
+                                    min="1"
+                                    max="1000"
+                                    value="{{ item.quantity }}"
+                                    id="product_{{ item.id }}"
+                                >
+                                <a
+                                    id="product-item"
+                                    href="#"
+                                    class="btn btn-warning btn-update-item"
+                                    {#data-href="{{ route('cart-update', item.slug) }}"#}
+                                    data-id="{{ item.id }}"
+                                >
+                                    <i class="fa fa-refresh"></i>
+                                </a>
+                            </td>
+                            <td>${{ (item.price * item.quantity) | number_format(2) }}</td>
                             <td>
                                 <a href="{{ route('cart-delete', item.slug) }}" class="btn btn-danger">
                                     <i class="fa fa-remove"></i>
@@ -49,10 +64,27 @@
                     {% endfor %}
                     </tbody>
                 </table>
+                <hr>
+                <h3>
+                    <span class="label label-succes">
+                        Total: ${{ total | number_format(2) }}
+                    </span>
+                </h3>
             </div>
         {% else %}
-            <h3><span class="label label-warning">No hay productos en lista.</span></h3>
+            <h3><span class="label label-warning">Su carrito actualmente esta vacio.</span></h3>
         {% endif %}
+        <hr>
+        <p>
+            <a href="{{ route('catalogo') }}" class="btn btn-primary">
+                <i class="fa fa-chevron-circle-left"></i> <span>CONTINUAR COMPRANDO</span>
+            </a>
+
+            <a href="{{ route('cart-show') }}" class="btn btn-primary">
+                FINALIZAR PEDIDO <i class="fa fa-chevron-circle-right"></i>
+            </a>
+            <a class="btn btn-danger" href="#" id="test" >Prueba</a>
+        </p>
     </div>
 </div>
 
@@ -64,6 +96,27 @@
     for (var i = 1, len = rows.length; i < len; i++){
         rows[i].children[0][text] = i + ' ' + rows[i].children[0][text];
     }
+
+    document.getElementById("product-item").addEventListener('click',displayDate);
+    function displayDate() {
+        var id = $(this).data('id');
+        var href = $(this).data('href');
+        var quantity = document.getElementById("product_" + id).value;
+        window.location.href = href + "/" + quantity;
+    }
+
+    /*   $(document).ready(function () {
+           $(".btn-update-item").on('click', function (e) {
+               e.preventDefault();
+               /!*alert('Hola como esta_');*!/
+               var id = $(this).data('id');
+               var href = $(this).data('href');
+               var quantity = ("#product_" + id).val();
+
+               window.location.href = href + "/" + quantity;
+           });
+       });*/
+
 </script>
 {% endblock %}
 

@@ -3,3 +3,4 @@ new AnimOnScroll( document.getElementById( 'grid' ), {
     maxDuration : 0.7,
     viewportFactor : 0.2
 } );
+
