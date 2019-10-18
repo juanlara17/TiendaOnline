@@ -1,10 +1,8 @@
-{% extends('layout.twig') %}
+@extends('layout')
 
-{% block title %}
-    Esmeralda y Oro
-{% endblock %}
+@section('title', 'Esmeralda y Oro')
 
-{% block content %}
+@section('content')
 
 <div class="text-center">
     <div class="page-header">
@@ -12,7 +10,7 @@
     </div>
 
     <div class="table-cart">
-        {% if cart|length %}
+        @if (count($cart) > 0)
             <p>
                 <a href="{{ route('cart-trash') }}" class="btn btn-warning">Vaciar Lista  <i class="fa fa-trash"></i></a>
             </p>
@@ -30,50 +28,50 @@
                     </tr>
                     </thead>
                     <tbody>
-                    {% for item in cart %}
+                    @foreach($cart as $item)
                         <tr>
                             <th scope="row"></th>
-                            <td><img src="{{ item.image }}" alt="image"></td>
-                            <td>{{ item.name }}</td>
-                            <td>${{ item.price|number_format(2) }}</td>
+                            <td><img src="{{ $item->image }}" alt="image"></td>
+                            <td>{{ $item->name }}</td>
+                            <td>${{ number_format($item->price,2) }}</td>
                             <td>
                                 <input
                                     type="number"
                                     min="1"
                                     max="1000"
-                                    value="{{ item.quantity }}"
-                                    id="product_{{ item.id }}"
+                                    value="{{ $item->quantity }}"
+                                    id="product_{{ $item->id }}"
                                 >
                                 <a
                                     id="product-item"
                                     href="#"
                                     class="btn btn-warning btn-update-item"
-                                    {#data-href="{{ route('cart-update', item.slug) }}"#}
-                                    data-id="{{ item.id }}"
+                                    {{--data-href="{{ route('cart-update', $item->slug) }}"--}}
+                                    data-id="{{ $item->id }}"
                                 >
                                     <i class="fa fa-refresh"></i>
                                 </a>
                             </td>
-                            <td>${{ (item.price * item.quantity) | number_format(2) }}</td>
+                            <td>${{ number_format($item->price * $item->quantity,2) }}</td>
                             <td>
-                                <a href="{{ route('cart-delete', item.slug) }}" class="btn btn-danger">
+                                <a href="{{ route('cart-delete', $item->slug) }}" class="btn btn-danger">
                                     <i class="fa fa-remove"></i>
                                 </a>
                             </td>
                         </tr>
-                    {% endfor %}
+                    @endforeach
                     </tbody>
                 </table>
                 <hr>
                 <h3>
                     <span class="label label-succes">
-                        Total: ${{ total | number_format(2) }}
+                        Total: ${{ number_format($total,2) }}
                     </span>
                 </h3>
             </div>
-        {% else %}
+        @else
             <h3><span class="label label-warning">Su carrito actualmente esta vacio.</span></h3>
-        {% endif %}
+        @endif
         <hr>
         <p>
             <a href="{{ route('catalogo') }}" class="btn btn-primary">
@@ -118,6 +116,6 @@
        });*/
 
 </script>
-{% endblock %}
+@endsection
 
 

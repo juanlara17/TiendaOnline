@@ -23,16 +23,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contactenos</a>
                     </li>
-                    <li class="nav-item ">
-                        <div class="dropdown ">
-                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-user"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Iniciar sesion</a>
-                            </div>
-                        </div>
-                    </li>
+                    @include('navbarlogin')
                 </ul>
             </div>
         </div>

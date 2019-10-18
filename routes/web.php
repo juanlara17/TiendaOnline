@@ -28,7 +28,7 @@ Route::get('product/{slug}', [
     'as' => 'product-detail',
     'uses' => 'StoreController@show']);
 
-/******* CARRITO DE COMPRAS  *******/
+/******* Carrito de Compras  *******/
 
 Route::get('cart/show',[
     'as' => 'cart-show',
@@ -55,3 +55,12 @@ Route::get('cart/update/{product}/{quantity}', [
     'uses' => 'CartController@update'
 ]);
 
+/***** Routes Authentication *****/
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

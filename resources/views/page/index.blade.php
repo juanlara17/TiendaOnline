@@ -1,14 +1,12 @@
-{% extends 'layout.twig' %}
+@extends('layout')
 
-{% block title %}
-    Esmeralda y Oro
-{% endblock %}
+@section('title', 'Esmeralda y Oro')
 
-{% block slider %}
-    {% include '../slider.twig' %}
-{% endblock %}
+@section('slider')
+    @include('../slider')
+@endsection
 
-{% block content %}
+@section('content')
     <div class="text-center" id="products">
         <ul class="grid effect-1" id="grid">
             <li><img src="{{ asset('images/products/product1.jpeg') }}" alt=""></li>
@@ -36,5 +34,5 @@
             <li><img src="{{ asset('images/products/product24.jpeg') }}" alt=""></li>
         </ul>
     </div>
-{% endblock %}
+@endsection
 
