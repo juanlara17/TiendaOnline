@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.layout')
 
 @section('title', 'Esmeralda y Oro')
 
@@ -75,13 +75,11 @@
         <hr>
         <p>
             <a href="{{ route('catalogo') }}" class="btn btn-primary">
-                <i class="fa fa-chevron-circle-left"></i> <span>CONTINUAR COMPRANDO</span>
+                <i class="fa fa-chevron-circle-left"></i> <span>Seguir comprando</span>
             </a>
-
-            <a href="{{ route('cart-show') }}" class="btn btn-primary">
-                FINALIZAR PEDIDO <i class="fa fa-chevron-circle-right"></i>
+            <a href="{{ route('order-detail') }}" class="btn btn-primary">
+                Finalizar pedido <i class="fa fa-chevron-circle-right"></i>
             </a>
-            <a class="btn btn-danger" href="#" id="test" >Prueba</a>
         </p>
     </div>
 </div>
@@ -102,19 +100,6 @@
         var quantity = document.getElementById("product_" + id).value;
         window.location.href = href + "/" + quantity;
     }
-
-    /*   $(document).ready(function () {
-           $(".btn-update-item").on('click', function (e) {
-               e.preventDefault();
-               /!*alert('Hola como esta_');*!/
-               var id = $(this).data('id');
-               var href = $(this).data('href');
-               var quantity = ("#product_" + id).val();
-
-               window.location.href = href + "/" + quantity;
-           });
-       });*/
-
 </script>
 @endsection
 

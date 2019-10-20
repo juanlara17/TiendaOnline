@@ -1,19 +1,21 @@
-@extends('layout')
+@extends('layouts.layout')
 
 @section('title', 'Esmeralda y Oro')
 
 @section('slider')
-    @include('../slider')
+    @include('../layouts.slider')
 @endsection
 
 @section('content')
     <div class="text-center" id="products">
         <ul class="grid effect-4" id="grid">
+            {{ $item = 0 }}
             @foreach($products as $product)
+                {{ $item = 1 + $item }}
                 <li>
                     <div class="">
                         <h4>{{ $product->name }}</h4>
-                        <img src="{{ $product->image }}" alt="" width="250">
+                        <img src="{{ asset('images/products/product'.$item.'.jpeg') }}" alt="" width="250">
                     </div>
                     <div class="product-info">
                         <p>{{ $product->extract }}</p>

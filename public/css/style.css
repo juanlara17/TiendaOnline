@@ -26,3 +26,7 @@ h1,h2,h3,h4,h5,h6 {
 .table-cart img {
     width: 50px;
 }
+
+.navbar-brand {
+    color: rgba(0, 0, 0, 0.9);
+}

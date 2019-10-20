@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="/" style="padding: 0"><img src="{{ asset('images/logo.png') }}" width="150" alt="" ></a>
+        {{--<a class="navbar-brand" href="/" style="padding: 0"><img src="{{ asset('images/logo.png') }}" width="150" alt=""></a>--}}
+        <a class="navbar-brand" href="{{ url('/') }}">
+            {{ config('app.name', 'Esmeralda y Oro') }}
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,7 +26,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contactenos</a>
                     </li>
-                    @include('navbarlogin')
+                    @include('layouts.navbarlogin')
                 </ul>
             </div>
         </div>

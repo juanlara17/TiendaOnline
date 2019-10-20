@@ -72,4 +72,14 @@ class CartController extends Controller
         return $total;
     }
 
+    /***** DETALLE DEL PEDIDO ******/
+    public function orderdetail()
+    {
+        if (count(\Session::get('cart')) <= 0) return redirect()->route('catalogo');
+        $cart = \Session::get('cart');
+        $total = $this->total();
+
+        return \view('store.order-detail', compact('cart','total'));
+    }
+
 }

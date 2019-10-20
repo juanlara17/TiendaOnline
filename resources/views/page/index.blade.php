@@ -1,9 +1,9 @@
-@extends('layout')
+@extends('../layouts.layout')
 
 @section('title', 'Esmeralda y Oro')
 
 @section('slider')
-    @include('../slider')
+    @include('../layouts.slider')
 @endsection
 
 @section('content')
