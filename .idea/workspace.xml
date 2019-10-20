@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddf114e8-3ff4-4db9-a96b-7781b0e38f2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/navbar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/navbarlogin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TiendaOnline.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TiendaOnline.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/footer.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/navbar.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navbar.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/slider.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/slider.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/store/cart.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/store/cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/store/demo.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/store/demo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/store/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/store/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/store/show.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/store/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/navbarlogin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navbarlogin.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +179,9 @@
       <workItem from="1570987158479" duration="6317000" />
       <workItem from="1571057886991" duration="19856000" />
       <workItem from="1571277650875" duration="5401000" />
-      <workItem from="1571363578392" duration="5112000" />
+      <workItem from="1571363578392" duration="5514000" />
+      <workItem from="1571545346388" duration="666000" />
+      <workItem from="1571586089488" duration="1891000" />
     </task>
     <servers />
   </component>
