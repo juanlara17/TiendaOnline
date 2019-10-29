@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
+    {{-- MESSAGE --}}
+    @if(\Session::has('message'))
+        @include('layouts.message')
+    @endif
 
     {{-- NAVBAR --}}
     @include('layouts.navbar')

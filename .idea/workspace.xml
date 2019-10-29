@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddf114e8-3ff4-4db9-a96b-7781b0e38f2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/paypal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TiendaOnline.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TiendaOnline.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/message.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaypalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaypalController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/store/order-detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/store/order-detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -203,7 +203,10 @@
       <workItem from="1571363578392" duration="5514000" />
       <workItem from="1571545346388" duration="666000" />
       <workItem from="1571586089488" duration="11248000" />
-      <workItem from="1571619096650" duration="6837000" />
+      <workItem from="1571619096650" duration="7191000" />
+      <workItem from="1571795932007" duration="2788000" />
+      <workItem from="1571882262020" duration="4614000" />
+      <workItem from="1572314881938" duration="2591000" />
     </task>
     <servers />
   </component>

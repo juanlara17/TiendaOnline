@@ -16,7 +16,7 @@ Route::bind('product', function ($slug){
 });
 
 Route::get('/', [
-    'as' => 'home',
+    'as' => 'index',
     'uses' => 'StoreController@index']);
 
 Route::get('/catalog', [

@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Foundation\Bus\DispatchesCommands;
-use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 
 use PayPal\Api\ItemList;
 use PayPal\Api\Payer;
@@ -19,9 +16,11 @@ use Paypal\Api\Amount;
 use Paypal\Api\Details;
 use Paypal\Api\Item;
 
+
 class PaypalController extends Controller
 {
     private $_api_context;
+
 
     public function __construct()
     {
@@ -30,7 +29,6 @@ class PaypalController extends Controller
         $this->_api_context = new \PayPal\Rest\ApiContext(
             new \PayPal\Auth\OAuthTokenCredential($paypal_conf['client_id'], $paypal_conf['secret']));
         $this->_api_context->setConfig($paypal_conf['settings']);
-
     }
 
     public function postPayment()
@@ -41,7 +39,7 @@ class PaypalController extends Controller
         $items = array();
         $subtotal = 0;
         $cart = \Session::get('cart');
-        $currency = 'COP';
+        $currency = 'USD';
 
         foreach ($cart as $product) {
             $item = new \PayPal\Api\Item();
@@ -83,12 +81,15 @@ class PaypalController extends Controller
         $payment->setIntent('sale')
             ->setPayer($payer)
             ->setRedirectUrls($redirect_urls)
-            ->setTransactions($transaction);
-//        dd($payment);
+            ->setTransactions(array($transaction));
         try {
             $payment->create($this->_api_context);
+//        dd($payment);
         } catch (\Paypal\Exception\PayPalConnectionException $exception) {
             if (\Config::get('app.debug')) {
+                echo $exception->getCode();
+                echo $exception->getData();
+                die($exception);
                 echo "Exception: " . $exception->getMessage() . PHP_EOL;
                 $err_data = json_decode($exception->getData(), true);
                 exit;
@@ -116,36 +117,37 @@ class PaypalController extends Controller
             ->with('message', 'Ups! Error desconocido.');
     }
 
-    public function getPaymentStatus()
+    public function getPaymentStatus(Request $request)
     {
         // Get the payment ID before session clear
-        $payment_id = \Session::get('paypal_payment_id');
+        $payment_id = $request->query('paymentId');
+
 
         // Clear the session payment ID
-        \Session::forget('paypal_payment_id');
+        \Session::forget($request->query('paymentId'));
 
-        $payerID = \Input::get('PayerID');
-        $token = \Input::get('token');
+        $payerId = $request->query('PayerID');
+        $token = $request->query('token');
 
-        if (empty($payerID) || empty($token)) {
-            return \Redirect::route('home')
+        if (empty($payerId) || empty($token)) {
+            return \Redirect::route('index')
                 ->with('message', 'Hubo un problema al intentar pagar con paypal.');
-
-            $payment = Payment::get($payment_id, $this->_api_context);
+        }
+            $payment = Payment::get($request->query('paymentId'), $this->_api_context);
 
             $execution = new PaymentExecution();
-            $execution->setPayerId(\Input::get('PayerID'));
+            $execution->setPayerId($request->query('PayerID'));
 
             $result = $payment->execute($execution, $this->_api_context);
 
             if ($result->getState() == 'approved') {
-                return \Redirect::route('home')
+                return \Redirect::route('index')
                     ->with('message', 'Compra realizada de forma correcta');
             }
-            return \Redirect::route('home')
+            return \Redirect::route('index')
                 ->with('message', 'La compra fue cancelada');
         }
-    }
+
 }
 
 
