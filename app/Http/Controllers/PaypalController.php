@@ -122,7 +122,6 @@ class PaypalController extends Controller
         // Get the payment ID before session clear
         $payment_id = $request->query('paymentId');
 
-
         // Clear the session payment ID
         \Session::forget($request->query('paymentId'));
 
@@ -141,6 +140,9 @@ class PaypalController extends Controller
             $result = $payment->execute($execution, $this->_api_context);
 
             if ($result->getState() == 'approved') {
+
+
+
                 return \Redirect::route('index')
                     ->with('message', 'Compra realizada de forma correcta');
             }
