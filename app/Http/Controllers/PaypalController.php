@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
+use App\OrderItem;
 use Illuminate\Http\Request;
 
 use PayPal\Api\ItemList;
@@ -141,7 +143,8 @@ class PaypalController extends Controller
 
             if ($result->getState() == 'approved') {
 
-
+                $this->saveOrder();
+                \Session::forget('cart');
 
                 return \Redirect::route('index')
                     ->with('message', 'Compra realizada de forma correcta');
@@ -150,6 +153,36 @@ class PaypalController extends Controller
                 ->with('message', 'La compra fue cancelada');
         }
 
+    protected function saveOrder()
+    {
+        $subtotal = 0;
+        $cart = \Session::get('cart');
+        $shipping = 100;
+
+        foreach ($cart as $product) {
+            $subtotal += $product->quantity * $product->price;
+        }
+
+        $order = Order::create([
+            'subtotal' => $subtotal,
+            'shipping' => $shipping,
+            'user_id' => \Auth::user()->id
+        ]);
+
+        foreach ($cart as $product) {
+            $this->saveOrderItem($product, $order->id);
+        }
+    }
+
+    protected function saveOrderItem($product, $order_id)
+    {
+        OrderItem::create([
+            'price' => $product->price,
+            'quantity' => $product->quantity,
+            'product_id' => $product->id,
+            'order_id' => $order_id
+        ]);
+    }
 }
 
 

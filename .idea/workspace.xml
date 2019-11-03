@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ddf114e8-3ff4-4db9-a96b-7781b0e38f2c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaypalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaypalController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_05_033618_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_05_033618_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/OrderItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/OrderItem.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +205,7 @@
       <workItem from="1572395914149" duration="7326000" />
       <workItem from="1572577343576" duration="200000" />
       <workItem from="1572577589609" duration="727000" />
-      <workItem from="1572797272955" duration="1960000" />
+      <workItem from="1572797272955" duration="2934000" />
     </task>
     <servers />
   </component>
